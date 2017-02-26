@@ -1,4 +1,4 @@
-package com.rudoy;
+package com.rudoy.hw001;
 
 /**
  * Created by OmEz on 22.02.2017.
