@@ -38,6 +38,16 @@ public class IssueFive {
         System.out.println();
     }
 
+    static int nearest(int n, int[] set) {
+        int result = 0;
+        for (int i = 0; i < set.length; i++) {
+            if (Math.abs(set[i] - n) < Math.abs(result - n)) {
+                result = set[i];
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         //emulation of set
         int[] set = new int[]{1, 4, -4, 3, 9, 0, -2, 60, -25};
@@ -51,7 +61,12 @@ public class IssueFive {
         int[] result = new int[0];
         if ((n < lowBound) & (n > upperBound)) {
             //a variant can be found
+            int _nearest = nearest(n, set);
+            if (_nearest == n) {
+                result = new int[]{n};
+            } else {
 
+            }
         } else if (n == lowBound) {
             result = negative;
         } else if (n == upperBound) {
