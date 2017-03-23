@@ -5,12 +5,8 @@ package com.rudoy.hm006;
  */
 public class IssueTwo {
     public static void main(String[] args) {
-        //
-        //
-        //
-        //
-        //
-        //
-        //
+        // Удалить в массиве все числа, которые повторяются более двух раз.
+
+
     }
 }
