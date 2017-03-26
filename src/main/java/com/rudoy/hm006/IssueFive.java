@@ -38,6 +38,22 @@ public class IssueFive {
         System.out.println();
     }
 
+    static int[] eliminate(int n, int[] from) {
+        int[] _elements = new int[from.length];
+        int k = 0;
+        for (int i = 0; i < from.length; i++) {
+            if (n != from[i]) {
+                _elements[k] = from[i];
+                k++;
+            }
+        }
+        int[] result = new int[k];
+        for (int i = 0; i < k; i++) {
+            result[i] = _elements[i];
+        }
+        return result;
+    }
+
     static int nearest(int n, int[] set) {
         int result = 0;
         for (int i = 0; i < set.length; i++) {
@@ -65,6 +81,7 @@ public class IssueFive {
             if (_nearest == n) {
                 result = new int[]{n};
             } else {
+                int diff = n - _nearest;
 
             }
         } else if (n == lowBound) {
