@@ -24,4 +24,22 @@ public class Helper {
         return matrix;
     }
 
+    public static int[] row(int index, int[][] matrix) {
+        int length = matrix[0].length;
+        int[] result = new int[length];
+        for (int i = 0; i < length; i++) {
+            result[i] = matrix[index][i];
+        }
+        return result;
+    }
+
+    public static int[] column(int index, int[][] matrix) {
+        int length = matrix.length;
+        int[] result = new int[length];
+        for (int i = 0; i < length; i++) {
+            result[i] = matrix[i][index];
+        }
+        return result;
+    }
+
 }
