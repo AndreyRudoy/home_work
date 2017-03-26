@@ -13,4 +13,15 @@ public class Helper {
         int next = random.nextInt(max - min);
         return min + next;
     }
+
+    public static int[][] squareRandomMatrix(int n, int from, int to) {
+        int[][] matrix = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix[i][j] = myRandom(from, to);
+            }
+        }
+        return matrix;
+    }
+
 }
