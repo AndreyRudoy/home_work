@@ -7,16 +7,16 @@ public class Abiturient {
     private long id;
     private String name;
     private String phone;
-    private int evaluation;
+    private int[] evaluations;
 
     public Abiturient() {
     }
 
-    public Abiturient(long id, String name, String phone, int evaluation) {
+    public Abiturient(long id, String name, String phone, int[] evaluations) {
         this.id = id;
         this.name = name;
         this.phone = phone;
-        this.evaluation = evaluation;
+        this.evaluations = evaluations;
     }
 
     public long getId() {
@@ -43,16 +43,40 @@ public class Abiturient {
         this.phone = phone;
     }
 
-    public int getEvaluation() {
-        return evaluation;
+    public int[] getEvaluation() {
+        return evaluations;
     }
 
-    public void setEvaluation(int evaluation) {
-        this.evaluation = evaluation;
+    public void setEvaluation(int[] evaluation) {
+        this.evaluations = evaluation;
     }
+
+    public double averageMark() {
+        double sum = 0;
+        for (int i = 0; i < evaluations.length; i++) {
+            sum = sum + evaluations[i];
+        }
+        return sum / evaluations.length;
+    }
+
+    public boolean hasBadMarks() {
+        boolean has = false;
+        for (int i = 0; i < evaluations.length; i++) {
+            if (evaluations[i] < 4) has = true;
+            break;
+        }
+        return has;
+    }
+
     @Override
     public String toString() {
-        String s = "" + id + ". " + name + " - " + evaluation;
+        String r = "";
+        for (int i = 0; i < evaluations.length; i++) {
+            if (r.length() != 0) r = r + ", ";
+            r=r+evaluations[i];
+        }
+
+        String s = "" + id + ". " + name + " - " + r;
         return s;
     }
 }

@@ -16,8 +16,15 @@ public class Issue2 {
         int startInterval = 0;
         int endInterval = 514351435;
         for (int i = 0; i < patients.length; i++) {
+            if (patients[i].getDiagnosis().equals("Allergy")) {
+                System.out.println(patients[i].toString());
+
+            }
+        }
+        for (int i = 0; i < patients.length; i++) {
             if ((patients[i].getMedicalCard() > startInterval) & (patients[i].getMedicalCard() < endInterval)) {
                 System.out.println(patients[i].toString());
+
             }
         }
     }
