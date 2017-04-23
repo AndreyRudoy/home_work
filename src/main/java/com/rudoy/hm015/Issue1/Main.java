@@ -21,5 +21,6 @@ public class Main {
 
         bus.setCapacityAndMaxSpeedAndYear(3000, 500, 2000);
         System.out.println(bus.toString());
+
     }
 }
