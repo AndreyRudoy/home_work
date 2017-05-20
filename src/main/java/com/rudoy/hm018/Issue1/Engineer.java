@@ -5,11 +5,13 @@ package com.rudoy.hm018.Issue1;
  */
 public class Engineer implements Employee {
 
-    public String getName() {
-        return "Vlad";
+    @Override
+    public String getJobTitle() {
+        return "Engineer";
     }
 
-    public int getAge() {
-        return 22;
+    @Override
+    public IPerson getPerson() {
+        return null;
     }
 }

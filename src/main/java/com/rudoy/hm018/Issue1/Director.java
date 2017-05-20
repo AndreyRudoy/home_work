@@ -5,11 +5,13 @@ package com.rudoy.hm018.Issue1;
  */
 public class Director implements Employee {
 
-    public String getName() {
-        return "Andrey";
+    @Override
+    public String getJobTitle() {
+        return "Director";
     }
 
-    public int getAge() {
-        return 15;
+    @Override
+    public IPerson getPerson() {
+        return null;
     }
 }
