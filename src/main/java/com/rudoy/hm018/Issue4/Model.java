@@ -9,8 +9,8 @@ public class Model extends SiemensMobile {
         super(year, fabricator);
     }
 
-    /*@Override
+    @Override
     public int getYear() {
         return 1995;
-    }*/
+    }
 }

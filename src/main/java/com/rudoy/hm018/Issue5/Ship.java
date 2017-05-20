@@ -5,4 +5,7 @@ package com.rudoy.hm018.Issue5;
  */
 public interface Ship {
 
+    int getMaxWeight();
+
+    int getYear();
 }
