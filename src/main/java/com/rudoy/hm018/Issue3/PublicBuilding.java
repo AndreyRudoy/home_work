@@ -5,25 +5,21 @@ package com.rudoy.hm018.Issue3;
  */
 public abstract class PublicBuilding implements Building {
 
-    protected int age;
+    private String address;
     private String application;
 
-    public PublicBuilding(int age, String application) {
+    public PublicBuilding(String address, String application) {
 
-        this.age = age;
+        this.address = address;
         this.application = application;
     }
 
     @Override
-    public int getAge() {
-        return age;
+    public String getAddress(){
+        return address;
     }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getAplication() {
+    @Override
+    public String getApplication() {
         return application;
     }
 

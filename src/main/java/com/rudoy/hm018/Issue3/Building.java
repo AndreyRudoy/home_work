@@ -5,7 +5,7 @@ package com.rudoy.hm018.Issue3;
  */
 public interface Building {
 
-    int getAge();
+    String getAddress();
 
     String getApplication();
 
