@@ -5,27 +5,15 @@ package com.rudoy.hm018.Issue4;
  */
 public abstract class SiemensMobile implements Mobile {
 
-    protected int year;
-    private String fabricator;
-
-    public SiemensMobile(int year, String fabricator) {
-
-        this.year = year;
-        this.fabricator = fabricator;
-    }
+    private String model;
 
     @Override
-    public int getYear() {
-        return year;
+    public String getModel(){return model;}
+    @Override
+    public String getFabricant(){return "Siemens";
     }
 
-    public void setYear(int year) { this.year = year;}
-
-    public String getFabricator() {
-        return fabricator;
-    }
-
-    public void setFabricator(String fabricator) {
-        this.fabricator = fabricator;
+    public SiemensMobile(String model) {
+        this.model = model;
     }
 }

@@ -5,12 +5,7 @@ package com.rudoy.hm018.Issue4;
  */
 public class Model extends SiemensMobile {
 
-    public Model(int year, String fabricator) {
-        super(year, fabricator);
-    }
-
-    @Override
-    public int getYear() {
-        return 1995;
+    public Model(String model) {
+        super(model);
     }
 }

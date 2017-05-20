@@ -5,5 +5,8 @@ package com.rudoy.hm018.Issue4;
  */
 public interface Mobile {
 
-    int getYear();
+    String getFabricant();
+
+    String getModel();
+
 }
