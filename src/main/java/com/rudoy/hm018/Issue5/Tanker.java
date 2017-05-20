@@ -5,13 +5,7 @@ package com.rudoy.hm018.Issue5;
  */
 public class Tanker extends CargoShip {
 
-
-    public Tanker(int maxWeight, String typeOfCargo) {
-        super(maxWeight, typeOfCargo);
-    }
-
-    @Override
-    public int getYear() {
-        return 1989;
+    public Tanker(String name, int year) {
+        super("Tanker", name, year);
     }
 }

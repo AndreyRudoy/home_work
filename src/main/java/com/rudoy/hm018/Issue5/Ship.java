@@ -5,7 +5,11 @@ package com.rudoy.hm018.Issue5;
  */
 public interface Ship {
 
-    int getMaxWeight();
+    String getType();
+
+    String getSubType();
+
+    String getName();
 
     int getYear();
 }

@@ -5,27 +5,34 @@ package com.rudoy.hm018.Issue5;
  */
 public abstract class CargoShip implements Ship {
 
-    protected int maxWeight;
-    private String typeOfCargo;
+    private String subType;
+    private String name;
+    private int year;
 
-    public CargoShip(int maxWeight, String typeOfCargo){
-
-        this.maxWeight = maxWeight;
-        this.typeOfCargo = typeOfCargo;
+    public CargoShip(String subType, String name, int year) {
+        this.subType = subType;
+        this.name = name;
+        this.year = year;
     }
 
     @Override
-    public int getMaxWeight() {
-        return maxWeight;
+    public String getType() {
+        return "WarShip";
     }
 
-    public void setMaxWeight(int maxWeight) { this.maxWeight = maxWeight;}
-
-    public String getTypeOfCargo() {
-        return typeOfCargo;
+    @Override
+    public String getSubType() {
+        return subType;
     }
 
-    public void setTypeOfCargo(String typeOfCargo) {
-        this.typeOfCargo = typeOfCargo;
+    @Override
+    public String getName() {
+        return name;
     }
+
+    @Override
+    public int getYear() {
+        return year;
+    }
+
 }

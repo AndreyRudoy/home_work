@@ -5,13 +5,29 @@ package com.rudoy.hm018.Issue5;
  */
 public abstract class Warship implements Ship {
 
-    protected int year;
-    private String country;
+    private String subType;
+    private String name;
+    private int year;
 
-    public Warship (int year, String country){
-
+    public Warship(String subType, String name, int year) {
+        this.subType = subType;
+        this.name = name;
         this.year = year;
-        this.country = country;
+    }
+
+    @Override
+    public String getType() {
+        return "WarShip";
+    }
+
+    @Override
+    public String getSubType() {
+        return subType;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -19,13 +35,4 @@ public abstract class Warship implements Ship {
         return year;
     }
 
-    public void setYear(int year) { this.year = year;}
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
 }
