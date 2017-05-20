@@ -7,4 +7,5 @@ public interface EducationalInstitution {
 
     String getTheNameOfTheSchool();
 
+    String getOrganizationType();
 }

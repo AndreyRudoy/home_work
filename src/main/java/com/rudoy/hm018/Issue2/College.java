@@ -5,8 +5,18 @@ package com.rudoy.hm018.Issue2;
  */
 public class College implements EducationalInstitution {
 
-    public String getTheNameOfTheSchool() {
-        return "НАУ";
+    private String name;
+
+    public College(String name) {
+        this.name = name;
     }
 
+    public String getTheNameOfTheSchool() {
+        return name;
+    }
+
+    @Override
+    public String getOrganizationType() {
+        return "College";
+    }
 }
